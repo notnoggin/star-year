@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0612;
+  --fg: #e9d5ff;
+  --accent: #a78bfa;
+  --card: #1a1229;
+  --border: #2d1b4e;
+}
+
+[data-theme="day"] {
+  --bg: #faf7ff;
+  --fg: #1e1b4b;
+  --accent: #7c3aed;
+  --card: #ffffff;
+  --border: #e9d5ff;
+}
+
+[data-theme="cosmic"] {
+  --bg: #0c1222;
+  --fg: #e0f2fe;
+  --accent: #38bdf8;
+  --card: #1e293b;
+  --border: #334155;
+}
+
+[data-theme="amber"] {
+  --bg: #1c1410;
+  --fg: #fef3c7;
+  --accent: #f59e0b;
+  --card: #292018;
+  --border: #44403c;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+.doodle {
+  font-family: 'Caveat', cursive;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+.star-glow {
+  animation: twinkle 2s ease-in-out infinite;
+}
